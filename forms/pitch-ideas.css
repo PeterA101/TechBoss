@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+
+:root{
+    --color-white: hsl(252, 30%, 100%);
+    --color-light: hsl(252, 30%, 95%);
+    --color-gray: hsl(252, 15%, 65%);
+    --color-primary: hsl(252, 75%, 60%);
+    --color-secondary: hsl(252, 100%, 90%);
+    --color-success: hsl(120, 95%, 65%);
+    --color-danger: hsl(0, 95%, 65%);
+    --color-dark: hsl(252, 30%, 17%);
+    --color-black: hsl(252, 30%, 10%);
+    
+    --border-radius: 2rem;
+    --card-border-radius: 1rem;
+    --btn-padding: 0.6rem 2rem;
+    --search-padding: 0.6rem 1rem;
+    --card-padding: 1rem;
+
+    --sticky-top-left: 5.4rem;
+    --sticky-top-right: -18rem;
+}
+
+
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+}
+
+body{
+   font-family: "Poppins", sans-serif;
+   color: var(--color-dark); 
+   background: #D3D3D3;
+   overflow-x: hidden; 
+}
+
+body, p {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    color: var(--color-dark); 
+    line-height: 1.6; 
+}
+
+
+.container {
+    padding: 2rem;
+    width: 100%;
+    max-width: 1200px; 
+    margin: 0 auto;
+    display: flex; 
+}
+
+.log a {
+    text-decoration: none; 
+    color: inherit;  
+    cursor: pointer;  
+}
+
+
+.profile-photo {
+   width: 2.7rem;
+   aspect-ratio: 1/1;
+   border-radius: 50%;
+   overflow: hidden;
+   cursor: pointer; 
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-item {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+#profilePhoto:hover .dropdown-menu {
+    display: block;
+}
+
+
+img {
+    display: block;
+    width: 100%;
+}
+.btn {
+    display: inline-block;
+    background: var(--color-gray);
+    padding: var(--btn-padding);
+    font-weight: 500;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: all 300ms ease;
+    font-size: 0.9rem;
+}
+
+.btn:hover{
+    opacity: 0.8;
+}
+
+.btn-primary {
+    background: var(--color-primary);
+
+}
+
+.text-bold{
+    font-weight: 500;
+}
+
+.text-muted{
+    color: var(--color-gray);
+}
+/*NAVBAR*/
+nav{
+    width: 100%;
+    background: #283e4a;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+nav .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+
+}
+
+.search-bar {
+    display: flex;
+    background: var(--color-light);
+    border-radius: var(--border-radius);
+    padding: var(--search-padding);
+    align-items: center;
+}
+
+
+
+.search-bar input[type="search"] {
+    background: transparent;
+    width: 30vw;
+    margin-left: 1rem;
+    font-size: 0.9rem;
+    color: var(--color-dark);
+}
+
+.search-bar input[type="search"]::placeholder {
+    color:var(--color-gray);
+}
+
+.search-results {
+    position: absolute; /* Position it relative to the search bar */
+    top: 100%; /* Position it right below the search input */
+    left: 0;
+    width: 30vw; /* Match the width of the search input */
+    background: var(--color-light);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    overflow: hidden; 
+    z-index: 10; /* Make sure it's above other content */
+    display: none; 
+}
+
+.search-results .search-result {
+    padding: var(--search-padding);
+    border-bottom: 1px solid var(--color-gray); 
+    color: var(--color-dark);
+    cursor: pointer; 
+}
+
+.search-results .search-result:last-child {
+    border-bottom: none; /* No border for the last result */
+}
+
+.search-results .search-result:hover {
+    background-color: var(--color-gray-light); /* Highlight result on hover */
+}
+
+
+nav .create {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.pitch-idea-container {
+    display: flex;
+   flex-direction: column;
+    align-items: center;
+    padding: 4rem 0; 
+}
+
+.title h1 {
+    color: var(--color-black);
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: auto;
+    gap: 20px;
+}
+
+.content-container {
+    flex: 2;
+}
+
+.intro {
+    text-align: justify;
+}
+
+
+
+.pitch-form-container {
+    background-color: var(--color-white); 
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    margin-top: 2rem; /* Add space between the intro and form */
+    width: 100%;
+}
+
+.pitch-image {
+    flex: 1;
+    justify-content: flex-end; /* Align image to the right */
+    
+}
+
+.pitch-image img {
+    max-height: 400px;
+    max-width: 400px;
+    height: auto;
+}
+
+/*new pitch code */
+
+
+.form-title {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: var(--color-dark);
+    font-weight: 600;
+}
+
+textarea#pitch-text {
+    width: 100%;
+    height: 150px; /* Adjust height as needed */
+    padding: 0.5rem;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--color-gray);
+    margin-bottom: 1rem;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    resize: vertical; /* Allows the user to resize the textarea vertically */
+}
+
+.form-controls {
+    text-align: center;
+}
+
+.btn-primary {
+    background: var(--color-primary);
+    color: white; /* Ensures text on the button is white */
+    border: none;
+    cursor: pointer;
+    padding: var(--btn-padding);
+    font-size: 1rem;
+    border-radius: var(--border-radius);
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: darken(var(--color-primary), 10%); /* Darkens the button on hover */
+}
+
+
+textarea:invalid {
+    border-color: var(--color-danger);
+}

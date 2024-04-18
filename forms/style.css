@@ -1,0 +1,167 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+/*top rectangle where name and pages are*/
+Header{
+    background-color: #141414;
+    padding: 10px;
+    color:#F5F5DC;
+}
+
+h1 {
+    margin: 0;
+}
+
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    /*background: #5A5A5A */
+
+    background: url('dark_pattern.jpg')no-repeat;
+    
+
+
+}
+/*
+Header{
+    padding: 10px;
+    color: #312323
+}
+
+h1 {
+    margin: 0;
+} */
+
+/* The box of sign in page */
+
+.form-box{
+    position: relative;
+    width: 400px;
+    height: 450px;
+    background: transparent;
+    border: 3px solid rgba(255,255,255,0.5);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+} 
+
+.form-box2{
+    position: relative;
+    width: 350px;
+    height: 500px;
+    background: transparent;
+    border: 3px solid rgba(255,255,255,0.5);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+} 
+
+
+
+
+h2{
+
+    font-size: 2em;
+    color: #fff;
+    text-align: center;
+}
+
+.inputbox{
+    position: relative;
+    margin: 30px 0;
+    width: 310px;
+    border-bottom: 2px solid #fff;
+}
+.inputbox label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 1em;
+    pointer-events: none;
+    transition: .5s;
+}
+/*label and user input does not overlap*/
+
+input:focus ~ label,
+input:valid ~ label{
+    top: -5px;
+    border: 2px solid transparent;
+    box-shadow: none;
+    background-color: transparent;
+}
+.inputbox input {
+    width: 100%;
+    height: 40px; 
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px; 
+    color: #fff;
+    font-weight: 600;
+    padding: 0 10px; 
+    box-sizing: border-box; 
+}
+.forget{
+    margin: -15px 0 15px;
+    font-size: .9em;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+}
+.forget label input{
+    margin-right: 3px;
+}
+.forget label a{
+    color: #fff;
+    text-decoration: none;
+    margin-left: 50px;
+}
+.forget label a:hover{
+    text-decoration: underline;
+}
+/*Log in button*/
+button{
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    background: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+}
+.register{
+    font-size: .9em;
+    color: #fff;
+    text-align: center;
+    margin: 25px 0 10px;
+}
+.register p a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+}
+
+.login-now {
+    font-size: .9em;
+    color: #fff;
+    text-align: center;
+    margin: 40px 0 10px;
+}
+
+.login-now p a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+}
